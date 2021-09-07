@@ -12,7 +12,7 @@ pipeline {
          docker run  -d --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
           
-           curl -I http://localhost:9889
+           curl -I https://google.com
           
          
     
