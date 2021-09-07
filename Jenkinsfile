@@ -37,14 +37,7 @@ pipeline {
                 }
             }
         }
-		    stage('test2') {
-            steps {
-                script {
-                    echo "Deploying the application..."
-					        sh 'docker stop nginx'
-                  sh 'docker rm nginx'
-                }
-            }
+		    
         }
     }
 }
