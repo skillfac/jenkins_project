@@ -12,7 +12,7 @@ pipeline {
          docker run -dit --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
           
-          sh /home/ubuntu/script/1.sh
+          sh /tmp/script/1.sh
          
     
       
