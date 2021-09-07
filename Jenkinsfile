@@ -12,11 +12,12 @@ pipeline {
          docker run -dit --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
           
-          
-         curl --version
+          response=`curl -k -s -X GET --url "<127.0.0.1:9889>"`
+          echo "${response}"
+         
     
       
-          #docker stop nginx&& docker rm nginx 
+          docker stop nginx&& docker rm nginx 
                
                
                ''')
