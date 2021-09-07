@@ -5,7 +5,7 @@ pipeline {
         stage('first_query') {
             steps {
                 sh(script:'''
-         docker ps
+         
         
         cp /var/lib/jenkins/workspace/proj/index.html /home/ubuntu/www/html/index.html
          
