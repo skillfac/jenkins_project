@@ -35,7 +35,7 @@ pipeline {
                      result1=$( curl -s  http://127.0.0.1:9889/index.html|md5sum | tr -d '( \-)')
                      result2=$( md5sum /var/lib/jenkins/workspace/proj/index.html)
                      echo $result1,$result2
-                  if [ "$result1" = "$result2" ]
+                  if [ "$result1" = "$result2 - " ]
                   then
                       echo "Test passed"
                   else
