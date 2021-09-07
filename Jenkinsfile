@@ -38,10 +38,10 @@ pipeline {
                      echo $result2
                   if [ "$result1" = "$result2 " ]
                   then
-                      #echo "Test passed"
+                      echo "Test passed"
                   else
-                     # echo "Test FAILURE"
-                      #exit 1
+                      echo "Test FAILURE"
+                      exit 1
                   fi    
     
           
