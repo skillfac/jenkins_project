@@ -32,17 +32,17 @@ pipeline {
          
          echo "Checking integrity of files in container and on the host machine"
              
-                     result1=$( curl -sL  http://127.0.0.1:9889/index.html|md5sum)
+                     result1=$( sudo curl -s  http://127.0.0.1:9889/index.html| md5sum |awk '{print $1}')
                      result2=$( md5sum /var/lib/jenkins/workspace/proj/index.html)
                      echo $result1
                      echo $result2
-                  #if [ "$result1" = "$result2 " ]
-                 # then
+                  if [ "$result1" = "$result2 " ]
+                  then
                       #echo "Test passed"
-                  #else
+                  else
                      # echo "Test FAILURE"
                       #exit 1
-                  #fi    
+                  fi    
     
           
                
