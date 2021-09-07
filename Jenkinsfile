@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh(script:'''
          docker ps
-         docker -version
+         
                
                
                ''')
