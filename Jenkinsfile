@@ -12,7 +12,7 @@ pipeline {
          docker run  -d --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
           
-           curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s >> /home/ubuntu/www/html/index.html
+           curl -I http://localhost:9889
           
          
     
