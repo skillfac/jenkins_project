@@ -14,7 +14,7 @@ pipeline {
           
           docker exec -u 0 nginx  curl -LI http://127.0.0.1:80 -o /dev/null -w '%{http_code}\n' -s
           
-          #curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
+          curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
 
           echo "Testing the application..."
                   
