@@ -9,7 +9,7 @@ pipeline {
             }
         }
     } 
-        stage('build') {
+        stage('deploy') {
             steps {
                 echo 'Starting the docker'
                 sh 'docker run  -d --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest'
