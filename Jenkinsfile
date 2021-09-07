@@ -18,7 +18,7 @@ pipeline {
 
           echo "Testing the application..."
                   
-                  result='curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s'
+                  result=$(curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s)
                   echo $result
                   if [ "$result" = "200" ]
                   then
