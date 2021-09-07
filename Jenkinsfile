@@ -8,9 +8,7 @@ pipeline {
                 sh 'cp /var/lib/jenkins/workspace/proj/index.html /home/ubuntu/www/html/index.html'
             }
         }
-    }
-    
-    
+    } 
         stage('run') {
             steps {
                 echo 'Starting the docker'
@@ -18,11 +16,10 @@ pipeline {
             }
         }
     }
-    
         stage('test') {
             steps {
                 echo 'Test'
-                sh '''echo "Testing the application..."
+                sh ('''echo "Testing the application..."
                   
                   result=$(curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s)
                   echo $result
@@ -32,19 +29,17 @@ pipeline {
                   else
                       echo "Test FAILURE"
                       exit 1
-                  fi    '''
+                  fi    
+                  ''')
             }
         }
     }
-    
         stage('Hello') {
             steps {
                 echo 'Hello World'
             }
         }
     }
-    
-    
         stage('Hello') {
             steps {
                 echo 'Hello World'
