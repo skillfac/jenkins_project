@@ -19,7 +19,7 @@ pipeline {
         stage('test') {
             steps {
                 echo 'Test'
-                sh '''echo "Testing the application..."
+                sh ('''
                   
                   result=$(curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s)
                   echo $result
@@ -30,7 +30,7 @@ pipeline {
                       echo "Test FAILURE"
                       exit 1
                   fi    
-                  '''
+                 ''')
             }
         }
     }
