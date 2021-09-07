@@ -14,9 +14,19 @@ pipeline {
           
           docker exec -u 0 nginx  curl -LI http://127.0.0.1:80 -o /dev/null -w '%{http_code}\n' -s
           
-          curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
+          #curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
 
-          
+          echo "Testing the application..."
+                  
+                  result=curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
+                  echo $result
+                  if [ "$result" = "200" ]
+                  then
+                      echo "Test passed"
+                  else
+                      echo "Test FAILURE"
+                      exit 1
+                  fi    
          
     
       
