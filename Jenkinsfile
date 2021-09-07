@@ -32,7 +32,7 @@ pipeline {
          
          echo "Checking integrity of files in container and on the host machine"
              
-                     result1=$( curl -s  http://127.0.0.1:9889/index.html|md5sum | tr -d '("\-")')
+                     result1=$( curl -s  http://127.0.0.1:9889/index.html|md5sum | tr -d '('\-')')
                      result2=$( md5sum /var/lib/jenkins/workspace/proj/index.html)
                      echo $result1,$result2
                   if [ "$result1" = "$result2" ]
