@@ -11,7 +11,7 @@ pipeline {
          
          docker run -dit --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
-          sudo sh /tmp/scripts/1.sh
+          sh /tmp/scripts/1.sh
           
          
     
