@@ -11,7 +11,7 @@ pipeline {
          
          docker run -dit --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
-          sh /tmp/script/1.sh
+          curl -LI http://84.252.128.231:9889 -o /dev/null -w '%{http_code}\n' -s
           
          
     
