@@ -16,7 +16,7 @@ pipeline {
 
     
       
-        #docker stop nginx&& docker rm nginx 
+          #docker stop nginx&& docker rm nginx 
                
                
                ''')
