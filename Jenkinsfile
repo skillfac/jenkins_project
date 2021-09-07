@@ -10,7 +10,7 @@ pipeline {
         }
     }
     
-    stages {
+    
         stage('run') {
             steps {
                 echo 'Starting the docker'
@@ -18,7 +18,7 @@ pipeline {
             }
         }
     }
-    stages {
+    
         stage('test') {
             steps {
                 echo 'Test'
@@ -36,7 +36,7 @@ pipeline {
             }
         }
     }
-    stages {
+    
         stage('Hello') {
             steps {
                 echo 'Hello World'
@@ -44,7 +44,7 @@ pipeline {
         }
     }
     
-    stages {
+    
         stage('Hello') {
             steps {
                 echo 'Hello World'
