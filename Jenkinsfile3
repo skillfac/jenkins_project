@@ -1,6 +1,8 @@
 pipeline {
-    agent {
-        docker {
+    stages {
+        stage('Back-end') {
+            agent 
+            docker {
             image 'nginx:latest'
             args '-u root:root'
             args '--name nginx' 
