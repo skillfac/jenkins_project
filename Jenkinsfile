@@ -13,8 +13,7 @@ pipeline {
          
           
           
-          curl -sw '%{http_code}' http://127.0.0.1:9889
-
+         curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
     
       
           #docker stop nginx&& docker rm nginx 
