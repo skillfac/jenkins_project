@@ -11,12 +11,13 @@ pipeline {
          
          docker run  -d --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest
          
+          echo "Testing the application in nginx container"
           
           docker exec -u 0 nginx  curl -LI http://127.0.0.1:80 -o /dev/null -w '%{http_code}\n' -s
           
-          curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
+          
 
-          echo "Testing the application..."
+          echo "Testing the application on the host system..."
                   
                   result=$(curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s)
                   echo $result
