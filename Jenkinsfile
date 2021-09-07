@@ -1,0 +1,20 @@
+pipeline {
+    agent {
+        docker {
+            image 'nginx:latest'
+            args '-u root:root'
+            args '--name nginx' 
+            args '-v /ubuntu/www/html/:/usr/share/nginx/html'
+            args '-p80:9889'
+            
+            
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'curl 127.0.0.1:9889'
+            }
+        }
+    }
+}
