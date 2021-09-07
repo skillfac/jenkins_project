@@ -6,7 +6,9 @@ pipeline {
             steps {
                 sh(script:'''
          docker ps
+        
         cp /var/lib/jenkins/workspace/proj/index.html /home/ubuntu/www/html/index.html
+         
          docker run -dit --name nginx -v /home/ubuntu/www/html:/var/www/html -p9889:80 nginx:latest
          
                
