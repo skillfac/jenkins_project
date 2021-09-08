@@ -17,7 +17,7 @@ pipeline {
                 sh '''
                    result=$(curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s)
                   echo $result
-                  if [ "$result" = "200" ]
+                  if [ "$result" = "201" ]
                   then
                       echo "Test passed"
                   else
