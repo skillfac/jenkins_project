@@ -17,7 +17,7 @@ pipeline {
                   echo $result
                   if [ "$result" = "200" ]
                   then
-                      echo "Test passed"
+                      echo "Test passed!"
                   else
                       echo "Test FAILURE"
                       exit 1
