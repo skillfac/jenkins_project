@@ -62,7 +62,7 @@ pipeline {
     }
 post { 
         always { 
-            echo 'I will always say Hello!'
+            echo 'I will always say Hello'
             
         }
         aborted {
