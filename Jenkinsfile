@@ -55,7 +55,7 @@ pipeline {
             steps {
                 sh 'docker stop nginx'
                 sh 'docker rm nginx'
-                emailext body: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'satanclaus617676@googlemail.com'
+                emailext attachLog: true, body: 'check the status of the job', subject: 'test mail', to: 'satanclaus617676@googlemail.com'
             }
         }	
     }
