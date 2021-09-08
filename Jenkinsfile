@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo "Start of Stage Test..."
                 sh '''
-                   result=curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s
+                   result=$(curl -LI http://127.0.0.1:9889 -o /dev/null -w '%{http_code}\n' -s)
                   echo $result
                   if [ "$result" = "200" ]
                   then
