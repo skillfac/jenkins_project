@@ -81,4 +81,4 @@ post {
                     subject: 'Jenkins build is back to normal: $PROJECT_NAME - #$BUILD_NUMBER'
         }
     }
-}
+
