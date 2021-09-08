@@ -63,6 +63,9 @@ pipeline {
 post { 
         always { 
             echo 'I will always say Hello!'
+            mail to: 'satanclaus617676@gmail.com',
+            subject: "good Pipeline: ${currentBuild.fullDisplayName}",
+            body: "Something is good with ${env.BUILD_URL}"
         }
         aborted {
             echo 'I was aborted'
