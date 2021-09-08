@@ -76,8 +76,8 @@ post {
             steps {
                 sh 'docker stop nginx'
                 sh 'docker rm nginx'
-                emailext attachLog: true, body: 'check the status of the job', subject: 'test mail', to: 'satanclaus617676@googlemail.com'
+                
             }
         }	
     }
-}
+
