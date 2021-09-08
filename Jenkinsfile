@@ -60,7 +60,6 @@ pipeline {
             }
         }	
     }
-}
 post { 
         always { 
             echo 'I will always say Hello!'
@@ -74,5 +73,6 @@ post {
             body: "Something is wrong with ${env.BUILD_URL}"
         }
     }
+}
 
 
