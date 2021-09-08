@@ -60,7 +60,8 @@ pipeline {
             }
         }	
     }
-    post { 
+}
+post { 
         always { 
             echo 'I will always say Hello!'
         }
@@ -71,4 +72,7 @@ pipeline {
             mail to: 'satanclaus617676@gmail.com',
             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             body: "Something is wrong with ${env.BUILD_URL}"
+        }
+    }
 }
+
