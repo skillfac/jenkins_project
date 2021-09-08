@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo "Start of Stage Build..."
                 sh 'cp /var/lib/jenkins/workspace/proj/index.html /home/ubuntu/www/html/index.html'
+                sh 'docker run  -d --name nginx -v /home/ubuntu/www/html:/usr/share/nginx/html -p9889:80 nginx:latest'
                 echo "End of Stage Build..."
             }
         }
