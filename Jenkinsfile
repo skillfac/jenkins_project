@@ -69,7 +69,7 @@ post {
             echo 'I was aborted'
         }
         failure {
-            mail to: 'satanclaus617676@gmail.com',
+            mail to: '',
             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             body: "Something is wrong with ${env.BUILD_URL}"
         }
